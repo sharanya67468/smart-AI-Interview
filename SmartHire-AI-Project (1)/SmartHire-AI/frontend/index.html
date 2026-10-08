@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartHire AI</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">SmartHire <span>AI</span></div>
+  <nav>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#interview">Interview</a>
+    <a href="#history">History</a>
+  </nav>
+</header>
+
+<main>
+<section id="dashboard" class="hero">
+  <div>
+    <p class="eyebrow">AI-POWERED INTERVIEW PRACTICE</p>
+    <h1>Practice. Improve. Get interview-ready.</h1>
+    <p class="subtitle">Simulate technical and HR interviews, submit answers, and receive structured AI-style feedback.</p>
+    <button class="primary" onclick="startInterview()">Start Interview</button>
+  </div>
+  <div class="hero-card">
+    <div class="score">--</div>
+    <p>Latest score</p>
+    <small>Complete an interview to see your score.</small>
+  </div>
+</section>
+
+<section class="grid cards">
+  <article><h3>Technical Practice</h3><p>Java, Spring Boot, SQL, DSA and CS fundamentals.</p></article>
+  <article><h3>HR Simulation</h3><p>Practice communication and behavioral questions.</p></article>
+  <article><h3>AI Feedback</h3><p>Get strengths, improvement areas and a suggested answer.</p></article>
+</section>
+
+<section id="interview" class="panel hidden">
+  <div class="section-head">
+    <div><p class="eyebrow">LIVE SESSION</p><h2 id="questionTitle">Interview</h2></div>
+    <span id="counter" class="pill">Question 1</span>
+  </div>
+  <p id="questionText" class="question"></p>
+  <textarea id="answer" placeholder="Type your answer here..."></textarea>
+  <div class="actions">
+    <button class="secondary" onclick="skipQuestion()">Skip</button>
+    <button class="primary" onclick="submitAnswer()">Submit Answer</button>
+  </div>
+  <div id="feedback" class="feedback hidden"></div>
+</section>
+
+<section id="history" class="panel">
+  <div class="section-head"><div><p class="eyebrow">PROGRESS</p><h2>Interview History</h2></div></div>
+  <div id="historyList"><p class="muted">No completed sessions yet.</p></div>
+</section>
+</main>
+
+<footer>SmartHire AI • Portfolio Project • Java + Spring Boot + HTML/CSS/JavaScript</footer>
+<script src="js/app.js"></script>
+</body>
+</html>
